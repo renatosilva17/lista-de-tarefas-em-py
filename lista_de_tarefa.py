@@ -8,12 +8,17 @@
 #7- remover tarefa
 #0- sair
 
-#tarefas[
-# {"titulo: "estudar", "concluida: "sim","prioridade:"alta"}
-# {"titulo: "ler", "concluida: "nao","prioridade:"baixa"}
-#]
+#tarefas = ["matematica", "portugues","ciencias","progrmacao","ingles"]
 
-tarefas = ["matematica", "portugues","ciencias","progrmacao","ingles"]
+tarefas = [
+    {"titulo":"matematica","concluida":"nao","prioridade": "alta" },
+    {"titulo":"ingles","concluida":"sim","prioridade": "baixa" },
+    {"titulo":"portugues","concluida":"sim","prioridade": "baixa" },
+    {"titulo":"ciencias","concluida":"nao","prioridade": "alta" },
+    {"titulo":"programacao","concluida":"nao","prioridade": "alta" }
+]
+
+
 
 while True:
     print("--->Veja suas tarefas<---")
@@ -21,6 +26,23 @@ while True:
     print("2- tarefas concluidas")
     print("3- tarefas pendentes")
     print("4- tarefas de prioridade")
-    print("5-cadastrar nova tarefa")
-    print("finalizar tarefa")
+    print("5- cadastrar nova tarefa")
+    print("6- finalizar tarefa")
     print("0- sair")
+
+    opcao = input("digite um numero: ")
+
+    if opcao == "1":
+        print(tarefas)
+
+    elif opcao == "2":
+        print("--->tarefas concluidas<---")
+        for tarefa in tarefas:
+            if tarefa ["concluida"] == "sim":
+                print (tarefa)
+
+    elif opcao == "3":
+        print("--->tarefas pendentes<---")
+        for tarefa in tarefas:
+            if tarefa ["concluidas"] == "nao":
+                print (tarefa)
